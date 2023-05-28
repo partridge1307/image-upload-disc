@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  </head>
+  <body
+    class="h-screen bg-white font-[Poppins] text-black dark:bg-gray-800 dark:text-white"
+  >
+    <header
+      class="sticky top-0 h-[10%] w-full bg-white drop-shadow-md dark:bg-gray-800"
+    >
+      <nav class="mx-auto flex h-full w-[92%] items-center justify-between">
+        <div>
+          <button
+            id="uploadBtn"
+            class="flex items-center rounded-md p-2 hover:bg-slate-400 dark:hover:bg-slate-900"
+          >
+            <svg
+              id="addIcon"
+              class="w-8 stroke-black dark:stroke-white"
+              fill="none"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span>Add</span>
+          </button>
+        </div>
+
+        <div class="flex items-center">
+          <div class="mr-5 flex items-start hover:cursor-pointer">
+            <svg
+              class="sun w-8 stroke-white"
+              fill="none"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+              ></path>
+            </svg>
+            <svg
+              class="moon w-8 stroke-black"
+              fill="none"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+              ></path>
+            </svg>
+          </div>
+          <a
+            class="rounded-lg p-1 hover:bg-slate-400 dark:hover:bg-slate-900"
+            href="https://www.instagram.com/biya1024/?hl=vi"
+            target="_blank"
+          >
+            <svg
+              class="w-9"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+            >
+              <linearGradient
+                id="Ld6sqrtcxMyckEl6xeDdMa"
+                x1="9.993"
+                x2="40.615"
+                y1="9.993"
+                y2="40.615"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0" stop-color="#2aa4f4" />
+                <stop offset="1" stop-color="#007ad9" />
+              </linearGradient>
+              <path
+                fill="url(#Ld6sqrtcxMyckEl6xeDdMa)"
+                d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"
+              />
+              <path
+                fill="#fff"
+                d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46 c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452 C21.988,43.9,22.981,44,24,44c0.921,0,1.82-0.084,2.707-0.204V29.301z"
+              /></svg
+          ></a>
+          <a
+            class="rounded-lg p-1 hover:bg-slate-400 dark:hover:bg-slate-900"
+            href="https://discord.gg/dongmoe"
+            target="_blank"
+          >
+            <svg
+              class="w-8"
+              viewBox="0 -28.5 256 256"
+              fill="#5865F2"
+              fill-rule="nonzero"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              preserveAspectRatio="xMidYMid"
+            >
+              <path
+                d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="mx-auto mt-10 flex min-h-[75%] w-4/5 flex-col">
+      <button
+        id="htmlFormat"
+        class="mb-2 w-fit rounded-md bg-slate-200 p-2 text-black hover:bg-slate-400 dark:bg-gray-800 dark:text-white dark:hover:bg-slate-900"
+      >
+        HTML
+      </button>
+      <textarea
+        id="urls"
+        rows="10"
+        class="min-w-full flex-auto resize-none rounded-lg bg-slate-100 p-3 text-black focus:outline-none dark:bg-slate-700 dark:text-white"
+        readonly="readonly"
+      ></textarea>
+    </div>
+
+    <form
+      id="uploadForm"
+      enctype="multipart/form-data"
+      action="/api/upload"
+      method="post"
+      hidden
+    >
+      <input
+        type="file"
+        name="image"
+        id="upload"
+        multiple
+        accept=".jpg, .jpeg, .png"
+      />
+      <input type="submit" id="submit" />
+    </form>
+
+    <script src="./public/js/main.js"></script>
+  </body>
+</html>

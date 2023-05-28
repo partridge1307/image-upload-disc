@@ -1,0 +1,173 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Tool upload ảnh lấy link Discord" />
+    <meta name="keywords" content="Discord, upload ảnh" />
+    <meta name="author" content="kpf afang" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Upload Ảnh Discord</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/cryptico/0.0.1343522940/cryptico.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="panel panel-success">
+        <div class="panel-body">
+          <legend>Upload</legend>
+          <div class="form-group">
+            <label for="file">Chọn file</label>
+            <input
+              id="file"
+              type="file"
+              name="sortpic"
+              accept=".jpg, .png, .gif, .jpeg"
+              required=""
+              multiple
+            />
+          </div>
+          <div class="form-group">
+            <button id="upload" class="btn btn-primary">Upload</button>
+          </div>
+          <div class="form-group">
+            <textarea
+              class="status form-control"
+              rows="10"
+              readonly="true"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <button id="bbcode" class="btn btn-primary">BB Code</button>
+            <button id="taghtml" class="btn btn-primary">HTML</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var _0x362c = [
+        '\x70\x68\x61\x6E\x74\x68\x65\x68\x69\x65\x6E\x31\x32\x33\x34',
+        '\x67\x65\x6E\x65\x72\x61\x74\x65\x52\x53\x41\x4B\x65\x79',
+        '\x63\x6C\x69\x63\x6B',
+        '',
+        '\x76\x61\x6C',
+        '\x2E\x73\x74\x61\x74\x75\x73',
+        '\x66\x69\x6C\x65\x73',
+        '\x70\x72\x6F\x70',
+        '\x23\x66\x69\x6C\x65',
+        '\x6F\x6E',
+        '\x23\x75\x70\x6C\x6F\x61\x64',
+        '\x6C\x6F\x67',
+        '\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D\x27',
+        '\x5B\x69\x6D\x67\x5D',
+        '\x72\x65\x70\x6C\x61\x63\x65\x41\x6C\x6C',
+        '\x27\x3E',
+        '\x5B\x2F\x69\x6D\x67\x5D',
+        '\x23\x62\x62\x63\x6F\x64\x65',
+        '\x23\x74\x61\x67\x68\x74\x6D\x6C',
+        '\x73\x65\x6C\x65\x63\x74',
+        '\x6C\x65\x6E\x67\x74\x68',
+        '\x55\x70\x6C\x6F\x61\x64',
+        '\x74\x65\x78\x74',
+        '\x64\x69\x73\x61\x62\x6C\x65\x64',
+        '\u0110\x61\x6E\x67\x20\x55\x70\x6C\x6F\x61\x64\x2E\x2E\x2E',
+        '\x74\x79\x70\x65',
+        '\x69\x6D\x61\x67\x65\x2F\x67\x69\x66',
+        '\x69\x6D\x61\x67\x65\x2F\x70\x6E\x67',
+        '\x69\x6D\x61\x67\x65\x2F\x6A\x70\x65\x67',
+        '\x69\x6D\x61\x67\x65\x2F\x6A\x70\x67',
+        '\x69\x6D\x61\x67\x65',
+        '\x61\x70\x70\x65\x6E\x64',
+        '\x61\x6C\x77\x61\x79\x73',
+        '\x68\x74\x74\x70\x73\x3A\x2F\x2F\x75\x70\x61\x6E\x68\x64\x69\x73\x2E\x68\x65\x72\x6F\x6B\x75\x61\x70\x70\x2E\x63\x6F\x6D\x2F',
+        '\x70\x6F\x73\x74',
+        '\x64\x65\x63\x72\x79\x70\x74',
+        '\x70\x6C\x61\x69\x6E\x74\x65\x78\x74',
+        '\x27\x3E\x0A',
+        '\x61\x6A\x61\x78',
+      ];
+      var PassPhrase = _0x362c[0];
+      var Bits = 1024;
+      var MattsRSAkey = cryptico[_0x362c[1]](PassPhrase, Bits);
+      $(_0x362c[10])[_0x362c[9]](_0x362c[2], function () {
+        $(_0x362c[5])[_0x362c[4]](_0x362c[3]);
+        var _0xe526x4 = $(_0x362c[8])[_0x362c[7]](_0x362c[6]);
+        send_ajax(0, _0xe526x4);
+        return false;
+      });
+      $(_0x362c[17])[_0x362c[9]](_0x362c[2], function () {
+        var _0xe526x5 = $(_0x362c[5])[_0x362c[4]]();
+        console[_0x362c[11]](_0xe526x5);
+        var _0xe526x5 = _0xe526x5[_0x362c[14]](_0x362c[12], _0x362c[13]);
+        var _0xe526x5 = _0xe526x5[_0x362c[14]](_0x362c[15], _0x362c[16]);
+        $(_0x362c[5])[_0x362c[4]](_0xe526x5);
+        return false;
+      });
+      $(_0x362c[18])[_0x362c[9]](_0x362c[2], function () {
+        var _0xe526x5 = $(_0x362c[5])[_0x362c[4]]();
+        console[_0x362c[11]](_0xe526x5);
+        var _0xe526x5 = _0xe526x5[_0x362c[14]](_0x362c[13], _0x362c[12]);
+        var _0xe526x5 = _0xe526x5[_0x362c[14]](_0x362c[16], _0x362c[15]);
+        $(_0x362c[5])[_0x362c[4]](_0xe526x5);
+        return false;
+      });
+      $(_0x362c[5])[_0x362c[9]](_0x362c[2], function () {
+        $(_0x362c[5])[_0x362c[19]]();
+        return false;
+      });
+      function send_ajax(_0xe526x7, _0xe526x4) {
+        num = _0xe526x4[_0x362c[20]];
+        if (_0xe526x7 > num - 1) {
+          $(_0x362c[8])[_0x362c[4]](_0x362c[3]);
+          $(_0x362c[10])[_0x362c[22]](_0x362c[21]);
+          $(_0x362c[10])[_0x362c[7]](_0x362c[23], false);
+          return false;
+        }
+        $(_0x362c[10])[_0x362c[7]](_0x362c[23], true);
+        $(_0x362c[10])[_0x362c[22]](_0x362c[24]);
+        var _0xe526x8 = _0xe526x4[_0xe526x7][_0x362c[25]];
+        var _0xe526x9 = [_0x362c[26], _0x362c[27], _0x362c[28], _0x362c[29]];
+        if (
+          _0xe526x8 == _0xe526x9[0] ||
+          _0xe526x8 == _0xe526x9[1] ||
+          _0xe526x8 == _0xe526x9[2] ||
+          _0xe526x8 == _0xe526x9[3]
+        ) {
+          var _0xe526xa = new FormData();
+          _0xe526xa[_0x362c[31]](_0x362c[30], _0xe526x4[_0xe526x7]);
+          $[_0x362c[38]]({
+            url: _0x362c[33],
+            dataType: _0x362c[22],
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: _0xe526xa,
+            type: _0x362c[34],
+            success: function (_0xe526xb) {
+              kq = cryptico[_0x362c[35]](_0xe526xb, MattsRSAkey);
+              $(_0x362c[5])[_0x362c[4]](
+                $(_0x362c[5])[_0x362c[4]]() +
+                  _0x362c[12] +
+                  kq[_0x362c[36]] +
+                  _0x362c[37]
+              );
+            },
+          })[_0x362c[32]](function () {
+            send_ajax(++_0xe526x7, _0xe526x4);
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
