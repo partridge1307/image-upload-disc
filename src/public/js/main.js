@@ -28,6 +28,11 @@ $("#uploadForm").submit(function (e) {
     contentType: false,
     success: function (data) {
       res = data;
+      $("#htmlUrls").val(
+        `${data
+          .map((value, i) => `<img src="${value}" alt="page-${i}">`)
+          .join("\n")}`
+      );
       $("#urls").val(`${data.join("\n")}`);
       $("#uploadBtn").find("path").removeAttr("display");
       $("#uploadBtn").removeAttr("disabled").find("span").html(`Add`);
@@ -46,15 +51,15 @@ $("#urls").on("click", function () {
 
 $("#htmlFormat").on("click", () => {
   if (!res) return alert("Please upload image first");
-  $("#urls").val(
-    `${res
-      .map((value, i) => `<img src="${value}" alt="page-${i}">`)
-      .join("\n")}`
-  );
+  $("#urls").toggle("display-none");
+  $("#htmlUrls").toggle("display-none");
 });
 
 const sunIcon = document.querySelector(".sun");
 const moonIcon = document.querySelector(".moon");
+const htmlUrls = document.querySelector("#htmlUrls");
+
+htmlUrls.classList.add("display-none");
 
 const userTheme = localStorage.getItem("theme");
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
