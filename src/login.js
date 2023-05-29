@@ -3,20 +3,16 @@ const { Client, GatewayIntentBits } = require("discord.js");
 
 if (!BOT_TOKEN.length) return console.log("Please add at least one Bot token");
 
-let bots = [];
+let clients = [];
 for (const [i, token] of BOT_TOKEN.entries()) {
-  bots[i] = {
-    ready: true,
-    client: new Client({
-      intents: GatewayIntentBits.MessageContent,
-    }),
-  };
+  (clients[i] = new Client({
+    intents: GatewayIntentBits.MessageContent,
+  })),
+    clients[i].once("ready", (client) => {
+      console.log(`${client.user.tag} is ready to use`);
+    });
 
-  bots[i].client.once("ready", (client) => {
-    console.log(`${client.user.tag} is ready to use`);
-  });
-
-  bots[i].client.login(token);
+  clients[i].login(token);
 }
 
-module.exports = bots;
+module.exports = clients;

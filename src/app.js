@@ -2,7 +2,7 @@ const path = require("path");
 const { GUID_CHANNEL } = require("../config.json");
 const express = require("express");
 const fileUpload = require("express-fileupload");
-const bots = require("./login");
+const clients = require("./login");
 
 const app = express();
 
@@ -82,12 +82,12 @@ const sendHandler = async (images) => {
   let urls;
 
   if (images.length > 30) {
-    let sendCount = Math.ceil(images.length / bots.length);
+    let sendCount = Math.ceil(images.length / clients.length);
     let index = 0;
 
     let promise = [];
-    for (const bot of bots) {
-      const channel = await bot.client.channels.fetch(GUID_CHANNEL);
+    for (const client of clients) {
+      const channel = await client.channels.fetch(GUID_CHANNEL);
 
       const promiseUrls = getDiscUrls(
         channel,
@@ -98,7 +98,7 @@ const sendHandler = async (images) => {
     }
     urls = (await Promise.all(promise)).flat();
   } else {
-    const channel = await bots[0].client.channels.fetch(GUID_CHANNEL);
+    const channel = await clients[0].channels.fetch(GUID_CHANNEL);
     urls = await getDiscUrls(channel, images);
   }
 
